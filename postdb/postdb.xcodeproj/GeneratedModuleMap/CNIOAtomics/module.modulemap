@@ -1,0 +1,4 @@
+module CNIOAtomics {
+    umbrella "/Users/andrew/Projects/backend/vapor-postgres/postdb/.build/checkouts/swift-nio.git-2841408834707173218/Sources/CNIOAtomics/include"
+    export *
+}

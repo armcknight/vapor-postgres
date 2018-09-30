@@ -1,0 +1,4 @@
+module CNIODarwin {
+    umbrella "/Users/andrew/Projects/backend/vapor-postgres/postdb/.build/checkouts/swift-nio.git-2841408834707173218/Sources/CNIODarwin/include"
+    export *
+}

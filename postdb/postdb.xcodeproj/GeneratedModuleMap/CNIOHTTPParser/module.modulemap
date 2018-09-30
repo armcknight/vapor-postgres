@@ -1,0 +1,4 @@
+module CNIOHTTPParser {
+    umbrella "/Users/andrew/Projects/backend/vapor-postgres/postdb/.build/checkouts/swift-nio.git-2841408834707173218/Sources/CNIOHTTPParser/include"
+    export *
+}

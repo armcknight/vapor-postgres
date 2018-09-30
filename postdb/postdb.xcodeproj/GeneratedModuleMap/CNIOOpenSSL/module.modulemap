@@ -1,0 +1,4 @@
+module CNIOOpenSSL {
+    umbrella "/Users/andrew/Projects/backend/vapor-postgres/postdb/.build/checkouts/swift-nio-ssl.git--8156502881551636107/Sources/CNIOOpenSSL/include"
+    export *
+}

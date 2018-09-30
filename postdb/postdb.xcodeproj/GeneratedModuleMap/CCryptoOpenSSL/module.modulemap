@@ -1,0 +1,4 @@
+module CCryptoOpenSSL {
+    umbrella "/Users/andrew/Projects/backend/vapor-postgres/postdb/.build/checkouts/crypto.git-5352120919827034712/Sources/CCryptoOpenSSL/include"
+    export *
+}
