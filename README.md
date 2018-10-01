@@ -77,3 +77,9 @@ heroku open
 - [Get started with Vapor 3 for free](https://www.hackingwithswift.com/articles/67/get-started-with-vapor-3-for-free)
 
 > Preserved in `docs/`.
+
+# Contribute
+
+Issues and pull requests are welcome! 
+
+If you'd like to monetarily contribute to more work and resources like this, please <a href="https://www.paypal.me/armcknight">make a donation via Paypal</a>.
