@@ -59,8 +59,14 @@ popd
 ### Remote
 
 ```sh
+# provision heroku app with working vapor buildpack
 heroku create --buildpack https://github.com/vapor-community/heroku-buildpack.git # vapor/vapor is supposed to be the stable release but currently doesn't work
 heroku stack:set heroku-16 -a <app-name> # the buildpack doesn't work on the current default stack heroku-18, so we must downgrade
+
+# provision a heroku postgresql addon
+heroku addons:create heroku-postgresql:hobby-dev
+
+# deploy and browse to app
 git subtree push --prefix postdb heroku master # heroku wants everything to be in the root directory, but I don't wanna
 heroku open
 ```
