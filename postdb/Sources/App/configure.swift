@@ -21,8 +21,15 @@ public func configure(
     services.register(router, as: Router.self)
 
     // Configure database service
-    let pgconfig = PostgreSQLDatabaseConfig(hostname: "localhost", port: 5432, username: "andrew", database: "vapor_pg_test", password: nil, transport: .cleartext)
-    let postgres = PostgreSQLDatabase(config: pgconfig)
+    let pgConfig: PostgreSQLDatabaseConfig
+    if let configuredDatabaseURL = ProcessInfo.processInfo.environment["DATABASE_URL"] {
+        pgConfig = PostgreSQLDatabaseConfig(url: configuredDatabaseURL, transport: .standardTLS)!
+        print("using environment variable")
+    } else {
+        pgConfig = PostgreSQLDatabaseConfig(hostname: "localhost", port: 5432, username: "andrew", database: "vapor_pg_test", password: nil, transport: .cleartext)
+        print("using debug")
+    }
+    let postgres = PostgreSQLDatabase(config: pgConfig)
     var databases = DatabasesConfig()
     databases.add(database: postgres, as: .psql)
     services.register(databases)
