@@ -82,4 +82,6 @@ heroku open
 
 Issues and pull requests are welcome! 
 
-If you'd like to monetarily contribute to more work and resources like this, please <a href="https://www.paypal.me/armcknight">make a donation via Paypal</a>.
+If this project helped you, please consider <a href="https://www.paypal.me/armcknight">leaving a tip</a> 🤗
+
+Do you need help with a project? [I'm currently available for hire or contract.](http://tworingsoft.com/contracts).
