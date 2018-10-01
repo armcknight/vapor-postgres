@@ -1,0 +1,14 @@
+<html>
+<body>
+<h3>Meals</h3>
+
+#for(meal in meals) {
+<p>I ate #(meal.description).</p>
+}
+
+<form method="post" action="/meals">
+<p><textarea name="description" rows="10" cols="40" placeholder="What did you eat today?"></textarea></p>
+<p><input type="submit" /></p>
+</form>
+</body>
+</html>
