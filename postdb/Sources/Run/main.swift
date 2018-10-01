@@ -9,9 +9,10 @@ do {
     var env = try Environment.detect()
     var services = Services.default()
     
+    // workaround from https://github.com/vapor/vapor/issues/1407
     var serverConfig: NIOServerConfig
     if let portString = ProcessInfo.processInfo.environment["PORT"] {
-        serverConfig = NIOServerConfig.default(hostname: "0.0.0.0", port: (portString as NSString).integerValue)
+        serverConfig = NIOServerConfig.default(hostname: "0.0.0.0", port: NSString(string: portString).integerValue)
         services.register { container in
             return serverConfig
         }
