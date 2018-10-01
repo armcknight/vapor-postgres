@@ -1,2 +1,2 @@
-web: Run serve --env=production --port=$PORT
+web: Run --env production --port $PORT
 local: vapor run serve
