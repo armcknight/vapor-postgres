@@ -25,6 +25,7 @@ public func configure(
     services.register(databases)
     
     // Configure database migrations
-    let migrations = MigrationConfig()
+    var migrations = MigrationConfig()
+    migrations.add(model: Meal.self, database: .psql)
     services.register(migrations)
 }
