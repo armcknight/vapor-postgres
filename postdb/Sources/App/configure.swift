@@ -23,7 +23,7 @@ public func configure(
     // Configure database service
     let pgConfig: PostgreSQLDatabaseConfig
     if let configuredDatabaseURL = ProcessInfo.processInfo.environment["DATABASE_URL"] {
-        pgConfig = PostgreSQLDatabaseConfig(url: configuredDatabaseURL, transport: .standardTLS)!
+        pgConfig = PostgreSQLDatabaseConfig(url: configuredDatabaseURL, transport: .cleartext)!
         print("using environment variable")
     } else {
         pgConfig = PostgreSQLDatabaseConfig(hostname: "localhost", port: 5432, username: "andrew", database: "vapor_pg_test", password: nil, transport: .cleartext)
